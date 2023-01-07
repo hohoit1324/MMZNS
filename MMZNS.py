@@ -1,6 +1,8 @@
 #맨날 하는 그거
 import tkinter
 import urllib
+import platform
+from os import system
 
 #없데이트
 '''없데이트답게 아무것도 준비되지 않음
@@ -34,30 +36,40 @@ win.resizable(False, False)
 
 
 
-
 #콤만드
+def open_url(url: str):
+    if platform.system() == 'Window':
+        command = 'start'
+    elif platform.system() == 'Darwin':
+        command = 'open'
+    else:
+        command = 'xdg-open'
+    
+    system(f'{command} {url}')
+
+
 def bt1():
-    return urllib.urlopen(lk1)
+    return open_url(lk1)
 def bt2():
-    return urllib.urlopen(lk2)
+    return open_url(lk2)
 def bt3():
-    return urllib.urlopen(lk3)
+    return open_url(lk3)
 def bt4():
-    return urllib.urlopen(lk4)
+    return open_url(lk4)
 def bt5():
-    return urllib.urlopen(lk5)
+    return open_url(lk5)
 def bt6():
-    return urllib.urlopen(lk6)
+    return open_url(lk6)
 def bt7():
-    return urllib.urlopen(lk7)
+    return open_url(lk7)
 def bt8():
-    return urllib.urlopen(lk8)
+    return open_url(lk8)
 def bt9():
-    return urllib.urlopen(lk9)
+    return open_url(lk9)
 def bt10():
-    return urllib.urlopen(lk10)
+    return open_url(lk10)
 def bt11():
-    return urllib.urlopen(lk11)
+    return open_url(lk11)
 
 #샂인
 th1 = tkinter.PhotoImage(file="imgs/NANANA.png")
